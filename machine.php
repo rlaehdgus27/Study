@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+                <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        
+        <!-- 부가적인 테마 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+        
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        
         <script src="https://code.jquery.com/jquery-3.4.1.js"
                 integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
                 crossorigin="anonymous"></script>
@@ -12,12 +21,22 @@
             <p>무엇을 고르시겠습니까?</p>
             <br>
             <p>
-                <input id="menu1" type="button" value="코카콜라"/>
-                <input id="menu2" type="button" value="칠성사이다" />
-                <input id="menu3" type="button" value="포카리" />
-                <input id="menu4" type="button" value="커피" />
-                <input id="menu5" type="button" value="우유" />
-                <input id="menu6" type="button" value="대용량율무차" />
+                <img src="coke.png" width="90" class="img-rounded">
+                <img src="cider.png" width="85" class="img-rounded">  
+                <img src="pocari.png" width="100" class="img-rounded">
+                <br>
+                <input id="menu1" type="button" class="btn btn-primary" value="코카콜라"/>
+                <input id="menu2" type="button" class="btn btn-primary" value="칠성사이다" />
+                <input id="menu3" type="button" class="btn btn-primary" value="포카리" />
+                <br>
+                <br>
+                <img src="coffee.png" width="90" class="img-rounded">
+                <img src="milk.png" width="85" class="img-rounded">
+                <img src="nutmlik.png" width="90" class="img-rounded">
+                <br>
+                <input id="menu4" type="button" class="btn btn-danger" value="비싼커피" />
+                <input id="menu5" type="button" class="btn btn-danger" value="서울우유" />
+                <input id="menu6" type="button" class="btn btn-danger" value="대용량율무차" />
             </p>
             <br>
             돈넣는곳: <input onkeyup="call()" id="money1" tyqe="text"> <input type="button" value="돈넣기" id="sub1_btn">
