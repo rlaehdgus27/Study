@@ -12,19 +12,33 @@
             <p>무엇을 고르시겠습니까?</p>
             <br>
             <p>
-                <input id="menu1" type="button" value="콜라"/>
-                <input id="menu2" type="button" value="사이다" />
+                <input id="menu1" type="button" value="코카콜라"/>
+                <input id="menu2" type="button" value="칠성사이다" />
                 <input id="menu3" type="button" value="포카리" />
                 <input id="menu4" type="button" value="커피" />
                 <input id="menu5" type="button" value="우유" />
-                <input id="menu6" type="button" value="율무차" />
+                <input id="menu6" type="button" value="대용량율무차" />
             </p>
             <br>
-            돈넣는곳: <input id="money" tyqe="text"> <input type="button" value="돈넣기" id="sub_btn">
+            돈넣는곳: <input onkeyup="call()" id="money1" tyqe="text"> <input type="button" value="돈넣기" id="sub1_btn">
+            <br>
+            <br>
+            <div id="show1_money"></div>
+            <br>
+            <br>
+            메뉴가격: <input onkeyup="call()" id="money2" tyqe="text"> <input type="button" value="가격입력" id="sub2_btn">
+            <br>
+            <br>
+            <div id="show2_money"></div>
+            
+            
+            거스름돈: <input type='text' name='change' id='change' >
             
             
         </body>
 </html>
+
+
 <script>
     
     /*function*/
@@ -52,13 +66,29 @@
         click_menu6();
     });
     
-    $("#sub_btn").click(function(){
-        var money = $("#money").val();
-        insert_coin(money);
+    
+    
+    $("#sub1_btn").click(function(){
+        var money1 = $("#money1").val();
+        insert1_coin(money1);
+    });
+    
+    $("#sub2_btn").click(function(){
+        var money2 = $("#money2").val();
+        insert2_coin(money2);
     });
     
     
+    
+    window.onload=function(){
+        document.getElementById("sub1_btn").onclick=processText1;
+    }
+    
+    window.onload=function(){
+        document.getElementById("sub2_btn").onclick=processText2;
+    }
 
+    
     
     /*Action*/
     
@@ -77,21 +107,21 @@
     }
     
     function click_menu4(){
-          alert("500원");
+          alert("2300원");
     }
     
     function click_menu5(){
-          alert("400원");
+          alert("1850원");
     }
     
     function click_menu6(){
-          alert("500원");
+          alert("1600원");
     }
     
     
     // Click Inset Coin
-    function insert_coin(money){
-         if(confirm( money + "원을 넣으시겠습니까?") == true){
+    function insert1_coin(money1){
+         if(confirm( money1 + "원을 넣으시겠습니까?") == true){
             alert("넣었습니다");
         }
         else{
@@ -99,8 +129,65 @@
         }
     }
     
+    function insert2_coin(money2){
+         if(confirm( money2 + "원입니다.") == true){
+            alert("확인되었습니다.");
+        }
+        else{
+            return ;
+        }
+    }
     
+    // show Coin
+    function processText1(){
+        var Box1 = document.getElementById("money1");
+        var line1 =  Box1.value.split("\n");
+        
+        var result1 = "<div>";
+        
+        for(var i = 0; i < line1.length; i++){
+            result1 += line1[i] + "<br>";
+        }
+        
+        result1 += "</div>";
+        
+        var blk1 = document.getElementById("show1_money");
+        blk1.innerHTML = "현재돈" + result1;
+    }
+    
+    
+    function processText2(){
+        var Box2 = document.getElementById("money2");
+        var line2 =  Box2.value.split("\n");
+        
+        var result2 = "<div>";
+        
+        for(var j = 0; j < line2.length; j++){
+            result2 += line2[j] + "<br>";
+        }
+        
+        result2 += "</div>";
+        
+        var blk2 = document.getElementById("show2_money");
+        blk2.innerHTML = "가격" + result2;
+    }
    
+    
+    function call(){
+        if(document.getElementById("money1").value && document.getElementById("money2").value){
+  
+            document.getElementById('change').value =parseInt(document.getElementById('money1').value) - parseInt(document.getElementById('money2').value);
+        }
+    }
+
+
+    
+    
+    
     
    
 </script>
+
+
+
+
