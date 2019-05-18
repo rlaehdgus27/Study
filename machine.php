@@ -45,7 +45,7 @@
             <div id="show1_money"></div>
             <br>
             <br>
-            메뉴가격: <input onkeyup="call()" id="money2" tyqe="text"> <input type="button" value="가격입력" id="sub2_btn">
+            메뉴가격: <input readonly onkeyup="call()" id="money2" tyqe="text"> 원
             <br>
             <br>
             <div id="show2_money"></div>
@@ -111,30 +111,50 @@
     
     /*Action*/
     
+    function insertPrice(setMoney){
+        $("#money2").val(setMoney);
+        
+        var menuPrice =  $("#money1").val();
+        
+        if(menuPrice < setMoney) {
+            $("#change").val("금액이 부족합니다.");
+        } else {
+            $("#change").val(setMoney - menuPrice);
+        }
+        
+        
+    }
+    
     
     // Click Event = menu
     function click_menu1(){
-          alert("2,000원");
+        alert("2,000원");
+        insertPrice(2000);
     }
     
     function click_menu2(){
           alert("1,500원");
+        insertPrice(1500);
     }
     
     function click_menu3(){
           alert("1,800원");
+        insertPrice(1800);
     }
     
     function click_menu4(){
           alert("2300원");
+        insertPrice(2300);
     }
     
     function click_menu5(){
           alert("1850원");
+        insertPrice(1850);
     }
     
     function click_menu6(){
           alert("1600원");
+        insertPrice(1600);
     }
     
     
@@ -142,6 +162,7 @@
     function insert1_coin(money1){
          if(confirm( money1 + "원을 넣으시겠습니까?") == true){
             alert("넣었습니다");
+             $("#show1_money").text(money1);
         }
         else{
             return ;
