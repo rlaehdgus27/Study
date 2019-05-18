@@ -9,15 +9,15 @@
             <p>무엇을 고르시겠습니까?</p>
             <br>
             <p>
-                <button>콜라</button>
-                <button>사이다</button>
-                <button>파워에이드</button>
-                <button>커피</button>
-                <button>우유</button>
-                <button>율무차1</button>
+                <input type="button" value="콜라">
+                <input type="button" value="사이다">
+                <input type="button" value="포카리">
+                <input type="button" value="커피">
+                <input type="button" value="우유">
+                <input type="button" value="율무차">
             </p>
             <br>
-            돈넣는곳<input>
+            돈넣는곳:<input tyqe="text">
             
         </body>
 </html>
