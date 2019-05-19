@@ -39,10 +39,10 @@
                 <input id="menu6" type="button" class="btn btn-danger" value="대용량율무차" />
             </p>
             <br>
-            돈넣는곳: <input onkeyup="call()" id="money1" tyqe="text"> <input type="button" value="돈넣기" id="sub1_btn">
+            돈넣는곳: <input onkeyup="call()" id="money1" tyqe="text"> <input type="button" class="btn btn-success" value="돈넣기" id="sub1_btn">
             <br>
             <br>
-            <div id="show1_money"></div>
+            현재돈: <div id="show1_money"></div>
             <br>
             <br>
             메뉴가격: <input readonly onkeyup="call()" id="money2" tyqe="text"> 원
@@ -106,7 +106,6 @@
     window.onload=function(){
         document.getElementById("sub2_btn").onclick=processText2;
     }
-
     
     
     /*Action*/
@@ -219,8 +218,6 @@
             document.getElementById('change').value =parseInt(document.getElementById('money1').value) - parseInt(document.getElementById('money2').value);
         }
     }
-
-
     
     
     
