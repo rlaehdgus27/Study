@@ -1,0 +1,24 @@
+ 1.  6 true 13 5 false 2 5 66 B  B C  
+
+ 2.  (numOfApples / sizeOfBucket) + (numOfApples % sizeOfBucket > 0 ? 1 : 0)
+
+ 3.  num > 0 ? "양수  " : num < 0 ? "음수" : 0
+
+ 4.  num / 100 * 100
+
+ 5.  num / 10 * 10 + 1
+
+ 6.  byte a = 10;
+     byte b = 20;
+     int c = a + b;
+     char ch = 'A';
+     ch = (char) (ch + 2);
+     float f = 3 / 2f;
+     long l = 3000 * 3000 * 3000L;
+     float f2 = 0.1f;
+     double d = 0.1f;
+     boolean result = d==f2;
+
+ 7.  'a' <= ch || 'A' <= ch   
+ 
+ 8.  'A'<= ch && ch <= 'Z' , (char) (ch + 32)
