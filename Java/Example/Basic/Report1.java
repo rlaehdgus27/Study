@@ -1,6 +1,6 @@
-package Class;
+package class1;
 
-public class report {
+public class Report1 {
 
 
 	 public static void main(String[] args) {

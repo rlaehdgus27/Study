@@ -1,4 +1,4 @@
-package Class;
+package class1;
 
 
 //[3-3] 아래는 변수 의 값에 따라 num 을 ‘0’ ‘음수’ ‘양수’  출력하는 코드이다 삼항 연산자를 
@@ -6,7 +6,7 @@ package Class;
 //[Hint] 삼항 연산자를 두 번 사용하라.
 //==============================================================
 
-public class report3 {
+public class Report3 {
 	public static void main(String[] args) {
         int num = 10;
         System.out.println( num > 0 ? "양수  " : num < 0 ? "음수" : 0 );

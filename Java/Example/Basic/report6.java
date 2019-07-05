@@ -1,6 +1,6 @@
-package Class;
+package class1;
 
-public class report6 {
+public class Report6 {
 	// [3-8] 아래 코드의 문제점을 수정해서 실행결과와 같은 결과를 얻도록 하시오.
 	// ==============================================================
 

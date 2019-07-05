@@ -1,6 +1,6 @@
-package Class;
+package class1;
 
-public class reprot2 {
+public class Report2 {
 
 	 public static void main(String[] args) {
          int numOfApples = 123; // 사과의 개수
