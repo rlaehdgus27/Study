@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>The Dong Times</title>
+    <style>
+        body{
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        div {
+          background-color: teal;
+          width: 200px;
+          height: 200px;
+        }
+        @media screen and (min-width: 501px) and (max-width: 700px) {
+          div{
+            background-color: wheat;
+          }  
+        }
+        span {
+          font-size: 36px;
+        }
+        @media screen and (orientation: landscape){
+          span{
+            display: none;           
+          }
+          div{
+            background-color: wheat;
+          }  
+        }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <span>
+      please flip your phone!
+    </span>
+  </body>
+</html>
+
+
+<!-- 반응형웹사이트 만드는 방법
+-- > 
