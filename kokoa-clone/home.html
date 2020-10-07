@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>The Dong Times</title>
+    <style>
+      a {
+        color: wheat;
+        background-color: red;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: all 1s ease-in;
+      }
+      a:hover {
+        border-radius: 20px;
+        color: red;
+        background-color: wheat;
+      }
+        @keyframes KingWangZZang{
+        0%{
+            transform : rotateX(0);
+        }
+        50%{
+            transform : rotateX(360deg)
+        }
+        100%{
+            transform : rotateX(0);
+        }
+        }
+      img {
+        margin-top: 30px;
+        border: 2px solid black;
+        border-radius: 10%;
+        animation: KingWangZZang 5s ease-in-out;
+      }
+      
+      }
+      
+
+
+    </style>
+  </head>
+  <body>
+    <a href="#">Go home</a>
+    <div>
+      <img src="1.jpg" />
+    </div>
+  </body>
+</html>
+
+
+<!--Transformation 변형애니메이션
+    linear : 속도 일정
+    ease-in : 속도 처음에 느림
+    ease-out : 속도 끝에서 느림
+    ease-in-out : 속도 처음과 끝에 느림
+    opacity : 0 => 안보이다가 보여잠
+-- > 
